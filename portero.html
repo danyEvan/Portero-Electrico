@@ -5,58 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/portero.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto&display=swap" rel="stylesheet"> 
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"> 
+    <title> Portero</title>
 </head>
 <body>
-<div class="container-fluid bg-warning d-flex align-items-center justify-content-center pared" style="height: 150vh; width: 100%;">
+<div class="container-fluid bg-dark d-flex align-items-center justify-content-center pared" style="height: 160vh; width: 100%;">
 
     
         <div class="container row d-flex justify-content-center border border-secondary metal" style="height: 35rem; width: 20rem;">
             <div class="row p-1 mt-3  col justify-content-around plastico" style="height: 30%; width: auto;">
-                <section  class="col-5 mt-2 pt-2 pl-3 rounded  bg-primary text-white" style="height: 60%; width: auto;">
-                    <p id="piso"  style="font-size: 4rem;"> 12</p>
+                <section  class="col-5 mt-2  d-flex align-content-center justify-content-center  rounded  bg-primary text-white" style="height: 60%; width: auto;">
+                    <p id="piso" class="row align-items-center justify-content-center"  style="font-size: 4rem;"></p>
                 </section>
-                <section  class="col-5 mt-2 pt-2 pl-3 rounded bg-primary text-white"  style="height: 60%; width: auto;">
-                    <p id="departamento" style="font-size: 4rem;"> 12</p>
+                <section  class="col-5 mt-2 d-flex align-content-center justify-content-center rounded bg-primary text-white"  style="height: 60%; width: auto;">
+                    <p id="departamento" class="row align-items-center justify-content-center" style="font-size: 4rem;"></p>
                 </section>
+                <h6 class="col-6 text-white font-weight-bold pb-0  m-0 text-left" > <small>Piso</small> </h6>
+                <h6 class="col-6 text-white font-weight-bold pb-0 m-0  text-left"> <small>Dpto</small> </h6>
                 <section class=" col-12">
-                    <p id="mensaje" class="text-center text-white font-weight-bold mt-3">ComIT</p>
+                    <p id="mensaje" class=" text-center text-white font-weight-bold mt-2">ComIT</p>
                 </section>
             </div>
             <div class="row p-1 col-12 metal border border-dark align-content-around justify-content-center " style="height: 60%;">
                 <div class="row p-2 col-12 justify-content-around " style="height: 25%;width:auto;">
-                    <div id="boton" class="metal col-3 " onclick="console.log('Funciona maldita sea!')" > <p> 1</p></div>
-                    <div id="boton" class="metal col-3 "> <p>2</p></div>
-                    <div id="boton" class="metal col-3 "> <p>3</p></div>
+                    <div id="1"  class="metal col-3 boton" onclick="navegatorSound(),agregar(document.getElementById('1').textContent)" > <p >1</p></div>
+                    <div id="2" class="metal col-3 boton" onclick="navegatorSound(),agregar(document.getElementById('2').textContent)"> <p>2</p></div>
+                    <div id="3" class="metal col-3 boton " onclick="navegatorSound(),agregar(document.getElementById('3').textContent)" > <p>3</p></div>
                 </div>
                 <div class="row p-2 justify-content-around col-12 " style="height: 25%;width:auto;">
-                    <div id="boton" class="metal col-3 "> <p>4</p></div>
-                    <div id="boton" class="metal col-3 "> <p>5</p></div>
-                    <div id="boton" class="metal col-3 "> <p>6</p></div>
+                    <div id="4" class="metal col-3 boton " onclick="navegatorSound(),agregar(document.getElementById('4').textContent)" > <p>4</p></div>
+                    <div id="5" class="metal col-3 boton " onclick="navegatorSound(),agregar(document.getElementById('5').textContent)" > <p>5</p></div>
+                    <div id="6" class="metal col-3 boton " onclick="navegatorSound(),agregar(document.getElementById('6').textContent)" > <p>6</p></div>
                 </div>
                 <div class="row p-2  justify-content-around col-12 " style="height: 25%;width:auto;">
-                    <div id="boton" class="metal col-3 "> <p>7</p></div>
-                    <div id="boton" class="metal col-3 "> <p>8</p></div>
-                    <div id="boton" class="metal col-3 "> <p>9</p></div>
+                    <div id="7" class="metal col-3 boton " onclick="navegatorSound(),agregar(document.getElementById('7').textContent)" > <p>7</p></div>
+                    <div id="8" class="metal col-3 boton " onclick="navegatorSound(),agregar(document.getElementById('8').textContent)" > <p>8</p></div>
+                    <div id="9" class="metal col-3 boton " onclick="navegatorSound(),agregar(document.getElementById('9').textContent)" > <p>9</p></div>
                 </div>
                 <div class="row p-2  justify-content-around col-12 " style="height: 25%;width:auto;">
-                    <div id="boton2" class="metal col-3 align-items-center"> <i class="text-success fas fa-phone-alt fa-2x"></i></div>
-                    <div id="boton" class="metal col-3 "> <p>0</p></div>
-                    <div id="boton2" class="metal col-3 align-items-center"> <i class="text-danger fas fa-backspace fa-2x"></i></div>
+                    <div id="llamar" class="metal col-3 align-items-center boton2" onclick="call()" > <i class="text-success fas fa-phone-alt fa-2x"></i></div>
+                    <div id="0" class="metal col-3 boton " onclick="navegatorSound(),agregar(document.getElementById('0').textContent)" > <p>0</p></div>
+                    <div id="borrar" class="metal col-3 align-items-center boton2" onclick="navegatorSound(),clean()" > <i class="text-danger fas fa-backspace fa-2x"></i></div>
                 </div>
                 
                 
                 
                 
             </div>
+           
         </div>
         
    
     
 
 </div>
-    
+    <script src="./js/logic-port.js"></script>
     <script src="https://kit.fontawesome.com/6a74c4ea9a.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

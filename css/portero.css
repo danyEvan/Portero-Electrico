@@ -1,3 +1,17 @@
+body{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    
+}
+
+#mensaje{
+    font-family: 'Righteous', cursive;
+}
+
+span{
+    color: red;
+}
+
 .clase1{
     display: flex;
     flex-direction: row;
@@ -9,7 +23,7 @@
 
 
 .pared{
-    background-image: url(../img//pexels-pixabay-247666.jpg);
+    background-image: url(../img/marmol-negro-true.png);
     background-size: cover;
 }
 .plastico{
@@ -20,9 +34,10 @@
 .metal{
     background-image: url(../img/metal.jpg);
 }
-#boton{
+.boton{
     border-radius: 150px;
     border-color: #eee;
+    opacity: 1;
     text-align: center;
     font-weight: bold;
     text-shadow: -1px 2px 2px black;
@@ -34,7 +49,7 @@
     cursor: pointer;
 
 }
-#boton2{
+.boton2{
     border-radius: 8px;
     text-shadow: -1px 1px 1px  rgba(87, 83, 83, 0.9);
     display: flex;
@@ -45,12 +60,17 @@
 
 }
 
-#boton:active{
-    box-shadow: 0px 2px 1px 1px rgb(63, 63, 63);
-    text-shadow: 1px 1px 1px  rgba(99, 92, 92, 0.9);
+.boton:active{
+    box-shadow: 0px 2px 1px 1px rgb(87, 86, 86);
+    text-shadow: -1px 1px 1px  rgba(99, 92, 92, 0.9);
+    
 }
-#boton2:active{
+.boton2:active{
     box-shadow: 0px 2px 1px 1px rgb(63, 63, 63);
     text-shadow: 0px 1px 1px  rgba(99, 92, 92, 0.9);
 
+}
+
+p::selection{
+    background-color: transparent;
 }
